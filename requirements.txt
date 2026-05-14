@@ -1,0 +1,33 @@
+# requirements.txt
+# Install all of these with: pip install -r requirements.txt
+#
+# "Required" means the program will not work without it.
+# "Optional" means the program will still run but with reduced features.
+
+# ── Required ──────────────────────────────────────────────────────────────────
+
+numpy        # used for audio processing and gaze calculations
+librosa      # loads audio from video or audio files
+
+# ── Optional: better audio ────────────────────────────────────────────────────
+
+noisereduce  # removes background noise from audio before transcribing
+             # without this: transcription still works, just noisier
+
+# ── Optional: speech-to-text ─────────────────────────────────────────────────
+
+openai-whisper  # converts speech to text
+                # without this: you must provide a --transcript manually
+
+# ── Optional: video / gaze analysis ──────────────────────────────────────────
+
+opencv-python   # reads video files and processes frames
+                # without this: gaze analysis is skipped (neutral scores used)
+
+ultralytics     # YOLO Pose model for eye gaze tracking
+                # without this: falls back to a simple skin-colour heuristic
+
+# ── Optional: better NLP ─────────────────────────────────────────────────────
+
+nltk         # adds sentiment analysis features
+             # without this: sentiment variance feature is skipped
