@@ -18,40 +18,14 @@ pip install -r requirements.txt
 ---
 
 ## How to run
-
-**Analyze a video file:**
 ```
-python run.py --video interview.mp4
+python webcam_capture.py
 ```
-
-**Analyze just text (no video needed):**
-```
-python run.py --transcript "I worked at Acme for three years..."
-```
-
-**Save a report to a file:**
-```
-python run.py --video interview.mp4 --output report.txt
-```
-
-**See all options:**
-```
-python run.py --help
-```
-
----
-
-## How to run the tests
-```
-python tests.py
-```
-
----
 
 ## File overview
 
 ```
-simple_analyzer/
+IRIS/
 │
 ├── run.py                  ← START HERE: the file you run from the terminal
 ├── pipeline.py             ← joins all the steps together
@@ -69,7 +43,6 @@ simple_analyzer/
 ├── fusion.py               ← combines gaze + text scores into one decision
 ├── closed_loop.py          ← asks follow-up questions when uncertain
 │
-├── tests.py                ← checks everything works correctly
 └── requirements.txt        ← list of packages to install
 ```
 
